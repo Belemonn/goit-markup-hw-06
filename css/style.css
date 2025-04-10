@@ -31,7 +31,7 @@ body {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
 }
 
 a {
@@ -44,12 +44,15 @@ a {
 
 /* ---------------------------------- Спільний контейнер ------------------- */
 .container {
-  max-width: 1158px;
+  /* max-width: 1158px; */
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  /* padding-left: 15px;
+  padding-right: 15px; */
   width: 100%;
+  max-width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .visually-hidden {
@@ -77,7 +80,7 @@ a {
 
 /*------------------- Шапка Головної сторінки ------------------------*/
 .page-header {
-  display: flex;
+  /* display: flex; */
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
@@ -88,11 +91,13 @@ a {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  margin-right: 76px;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  /* margin-right: 76px; */
 }
 
 .logo-studio {
@@ -110,15 +115,17 @@ a {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  flex-direction: row;
+  /* flex-direction: row; */
+  /* display: none; */
 }
 
 .menu-list {
-  display: flex;
+  /* display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: row;
-  gap: 40px;
+  gap: 40px; */
+  display: none;
 }
 
 .menu-link {
@@ -159,8 +166,9 @@ a {
 }
 
 .com-list {
-  display: flex;
-  gap: 40px;
+  /* display: flex;
+  gap: 40px; */
+  display: none;
 }
 
 .com-link {
@@ -189,12 +197,23 @@ a {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url("../images/heroimage.jpg");
+    url("../images/hero-pic-mob.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 1440px;
-  margin: 0 auto;
+  /* max-width: 1440px; */
+  max-width: 320px;
+  /* margin: 0 auto; */
+}
+
+@media screen and (min-resolution: 2x) {
+  .hero-image {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/hero-pic-mob.jpg");
+  }
 }
 
 .hero-title {
@@ -803,4 +822,15 @@ a {
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: #404bbf;
+}
+
+/* ========================== MEDIA ============================= */
+@media screen and (min-width: 768px) {
+  .hero-image {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/hero-pic-tab.jpg");
+  }
 }
