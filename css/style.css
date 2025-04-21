@@ -117,7 +117,6 @@ a {
   display: block;
   border: none;
   background-color: transparent;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   margin-left: auto;
 }
 
@@ -175,7 +174,8 @@ a {
 .hero-image {
   background-color: #2e2f42;
   padding-top: 72px;
-  padding-bottom: 200px;
+  padding-bottom: 72px;
+  /* padding-bottom: 200px; */
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -184,7 +184,7 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 1440px;
+  max-width: 320px;
   margin: 0 auto;
 }
 
@@ -827,6 +827,7 @@ a {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  z-index: 99;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -885,10 +886,6 @@ a {
   color: #2e2f42;
 }
 
-.current {
-  color: #404bbf;
-}
-
 .mob-menu-com {
   margin-bottom: 42px;
 }
@@ -939,6 +936,10 @@ a {
 
 .mob-soc-icon {
   fill: #f4f4fd;
+}
+
+.current {
+  color: #404bbf;
 }
 
 /* ================================= Адаптив TABLET ====================================== */
@@ -1016,12 +1017,13 @@ a {
   /* ========================= HERO SECTION ================ */
   .hero-image {
     padding-top: 112px;
-    padding-bottom: 204px;
+    padding-bottom: 112px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url("../images/hero-image-tab.jpg");
+    max-width: 768px;
   }
 
   @media screen and (min-resolution: 2x) {
@@ -1049,10 +1051,15 @@ a {
     display: flex;
     flex-wrap: wrap;
     column-gap: 24px;
+    row-gap: 72px;
   }
 
   .adventages-item {
     width: calc((100% - 1 * 24px) / 2);
+  }
+
+  .adventages-item:not(:last-child) {
+    margin-bottom: 0;
   }
 
   .adventages-title {
@@ -1068,6 +1075,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     column-gap: 24px;
+    row-gap: 64px;
   }
 
   .team-item {
@@ -1127,6 +1135,7 @@ a {
 
   .footer-form {
     flex-direction: row;
+    gap: 24px;
   }
 
   /* =========================== MODAL WINDOW ================= */
@@ -1191,6 +1200,7 @@ a {
         rgba(46, 47, 66, 0.7)
       ),
       url("../images/hero-image.jpg");
+    max-width: 1440px;
   }
 
   @media sreen and (min-resolution: 2x) {
